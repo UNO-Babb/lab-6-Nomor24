@@ -8,9 +8,15 @@ def main():
   #Create an empty list with possible roll values
   rolls = [0,0,0,0,0,0,0,0,0,0,0,0]
   #Create two dice values ranging from 1 - 6 each
-  
+  for r in range(100):
+    dice1 = random.randint(1,6)
+    dice2 = random.randint(1,6)
+    rolls[dice1 + dice2 -1] = rolls[dice1 + dice2 - 1] + 1
   #find the sum total of the two dice
-  
+  dice = 2
+  for count in rolls[1:]:
+    print(dice, ":", count)
+    dice = dice + 1
   #print statictics for dice rolls
 
 
